@@ -1,0 +1,45 @@
+// Fonts
+$serif: "Noto Serif", serif;
+$sans: "Asap", sans-serif;
+
+// Font Sizing
+$font-xs: 0.7rem;
+$font-sm: 0.9rem;
+$font-base: 1.5rem;
+$font-lg: 1.875rem;
+$font-xl: 2.25rem;
+$font-2xl: 2.5rem;
+$font-3xl: 3.125rem;
+
+// Colors
+$primary: #2d3547;
+$secondary: #5f647c;
+$warning: #f3a536;
+$yellow: #fdcc00;
+$blue: #4d71b8;
+$teal: #58cfc6;
+$grey: #e4e9f4;
+$white: #f8f8f8;
+$lightYellow: #feefb3;
+$cream: #f0e8d4;
+
+// Padding
+$sidePadding: 6rem;
+$containerPadding: 0 0 4rem 0;
+$sidePaddingTablet: 3rem;
+$sidePaddingMobile: 0rem;
+$containerPaddingMobile: 0 1rem 4rem 1rem;
+
+// Tablet & Mobile Rules
+// iPad Pro
+@media only screen and (max-width: 1024px) {
+  $sidePadding: 3rem;
+}
+
+// iPad
+@media only screen and (max-width: 768px) {
+}
+
+// Mobile
+@media only screen and (max-width: 640px) {
+}

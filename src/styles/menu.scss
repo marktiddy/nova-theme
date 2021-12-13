@@ -1,0 +1,188 @@
+.primary-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: 2;
+  transition: all 300ms ease-in-out;
+  transform: translateX(120vw);
+
+  &--show {
+    display: flex;
+  }
+
+  &--slide {
+    transform: translateX(0);
+  }
+
+  &__menu-wrapper {
+    background: $teal;
+    width: 55%;
+    min-height: 100vh;
+  }
+
+  &__close-wrapper {
+    width: 55%;
+    min-height: 100vh;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+
+    .material-icons {
+      font-size: $font-xl;
+      color: $primary;
+    }
+  }
+
+  .menu-close:hover .material-icons {
+    color: $secondary;
+    cursor: pointer;
+  }
+
+  &__menu,
+  &__menu > ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  &__menu > li {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: $font-base;
+    padding: 0.75rem 0;
+
+    a {
+      text-decoration: none;
+      padding: 0 2.5rem;
+    }
+
+    a:hover {
+      color: $secondary;
+    }
+  }
+
+  &__item--has-children {
+    span {
+      color: $primary;
+      padding: 0 2.5rem;
+      position: relative;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+    }
+
+    span:hover {
+      color: $secondary;
+    }
+
+    ul {
+      background: $primary;
+      margin: 1rem 0;
+
+      li {
+        padding: 0.25rem 0;
+      }
+
+      li:first-of-type {
+        padding: 1.25rem 0rem 0.25rem 0;
+      }
+
+      li:last-of-type {
+        padding: 0.25rem 0rem 1.25rem 0;
+      }
+
+      li a {
+        color: $white;
+        font-weight: 400;
+        text-transform: none;
+        font-size: $font-sm;
+      }
+
+      li a:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__item--has-children > span::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -0.5rem;
+    font-family: "Material Icons";
+    content: "\e5cf";
+    color: $primary;
+    font-size: $font-lg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item--has-children > span:hover::before {
+    color: $secondary;
+  }
+
+  &__item--has-children.open > span::before {
+    content: "\e5ce";
+  }
+
+  &__sub-menu {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    padding: 0;
+
+    &--open {
+      height: auto !important;
+      overflow: visible;
+      display: block;
+      list-style: none;
+    }
+  }
+
+  &__menu--secondary {
+    list-style: none;
+
+    li {
+      padding: 0.5rem 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $secondary;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .primary-menu {
+    &__menu-wrapper {
+      padding-top: 3rem;
+      width: 95%;
+    }
+
+    &__close-wrapper {
+      width: 5%;
+      background: rgba($white, 0.6);
+    }
+
+    &__menu--secondary a:hover {
+      color: $primary;
+    }
+
+    &__item--has-children {
+      span:hover {
+        color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 1rem $sidePadding;
+  background: $warning;
+  color: $primary;
+
+  &__icon {
+    font-size: $font-2xl;
+    margin-right: 1rem;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h6 {
+      font-size: $font-base;
+    }
+    h6,
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+
+  a:hover {
+    color: $secondary;
+  }
+}
+
+// iPad
+@media only screen and (max-width: 768px) {
+  .alert {
+    padding: 1rem 2rem;
+  }
+}
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  .alert {
+    display: none;
+  }
+}

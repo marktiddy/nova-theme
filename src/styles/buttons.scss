@@ -1,0 +1,47 @@
+.menu-close {
+  border: none;
+  box-shadow: none;
+  background: none;
+  transition: all 200ms ease-in-out;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  color: $blue !important;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-size: $font-sm;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 2px $blue, 0 0 0 5px rgba($blue, 0.3);
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0 0 2px $blue, 0 0 0 5px rgba($blue, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0 0 2px $blue, 0 0 0 5px rgba($blue, 1);
+}
+
+.btn--secondary {
+  box-shadow: 0 0 0 2px $secondary, 0 0 0 5px rgba($secondary, 0.3);
+  color: $secondary !important;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  box-shadow: 0 0 0 2px $secondary, 0 0 0 5px rgba($secondary, 1);
+}
+
+// Variations set up but not tested
+.btn--small {
+  padding: 0.75rem 1rem;
+}
+.btn--large {
+  padding: 1rem 2rem;
+}

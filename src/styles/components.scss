@@ -1,0 +1,27 @@
+.navigation-widget {
+  border: 2px solid $grey;
+  font-family: $serif;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: $white;
+    text-decoration: none;
+    color: $secondary;
+    font-size: $font-sm;
+
+    .material-icons {
+      color: $primary;
+      font-size: $font-base;
+    }
+  }
+
+  a:hover {
+    background: $grey;
+    padding-right: 0.25rem;
+  }
+}
